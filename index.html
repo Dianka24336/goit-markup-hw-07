@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
+    <!-- Header -->
     <header class="header">
         <div class="container nav-flex">
             <nav class="main-nav">
@@ -30,15 +31,29 @@
                     <li class="nav-item"><a class="address-point link" href="tel:+110001111111">+11 (000) 111-11-11</a></li>
                 </ul>
             </address>
+            <button
+          class="menu-toggle js-open-menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+            <svg class="menu-toggle-icon"
+                width="22"
+                height="32"
+            >
+            <use href="./images/icons.svg#icon-menu-hamburger"></use>
+          </svg>
+        </button>
         </div>
     </header>
     <main>
+    <!-- Hero -->
         <section class="hero overlay">
             <div class="container">
                 <h1 class="hero-title">Effective Solutions for Your Business</h1>
                 <button class="hero-button" type="button" data-modal-open>Order Service</button> 
             </div>
         </section>
+    <!-- Features -->
         <section class="section">
             <div class="container">
                 <h2 class="visually-hidden" >Features</h2>
@@ -83,28 +98,38 @@
             </div>
             
         </section>
+    <!-- About -->
         <section class="section specialty"> 
            <div class="container">
                 <h2 class="section-title">What are we doing</h2>
                 <ul class="about list">
                     <li class="about-img">
-                        <img src="./images/img1.jpg" alt="Monitor" width="360" height="300">
+                        <img
+                            srcset="./images/Work/img1@1x.jpg 1x, ./images/Work/img1@2x.jpg 2x"
+                            src="./images/Work/img1@1x.jpg" alt="Monitor" width="360" height="300">
                     </li>
                     <li class="about-img">
-                        <img src="./images/img2.jpg" alt="Applications" width="360" height="300">
+                        <img
+                        srcset="./images/Work/img2@1x.jpg 1x, ./images/Work/img2@2x.jpg 2x"
+                            src="./images/Work/img2@1x.jpg" alt="Applications" width="360" height="300">
                     </li>
                     <li class="about-img">
-                        <img src="./images/img3.jpg" alt="Cellphone" width="360" height="300">
+                        <img
+                            srcset="./images/Work/img3@1x.jpg 1x, ./images/Work/img3@2x.jpg 2x"
+                            src="./images/Work/img3@1x.jpg" alt="Cellphone" width="360" height="300">
                     </li>
                 </ul>
            </div>
         </section>
+    <!-- Teams -->
         <section class="section teams">
             <div class="container">
                 <h2 class="section-title">Our Team</h2>
             <ul class="team list">
                 <li class="team-item">
-                    <img src="./images/team_card1.jpg" alt="photo of Mark Guerrero" width="264" height="260">
+                    <img
+                        srcset="./images/Team/img1@1x.jpg 1x, ./images/Team/img1@2x.jpg 2x"
+                        src="./images/Team/img1@1x.jpg 1x" alt="photo of Mark Guerrero" width="264" height="260">
                     <div class="team-content">
                         <h3 class="title">Mark Guerrero</h3>
                         <p class="description">Product Designer</p>
@@ -149,7 +174,9 @@
                     </div>
                 </li>
                 <li class="team-item">
-                    <img src="./images/team_card2.jpg" alt="photo of Tom Ford" width="264" height="260">
+                    <img 
+                        srcset="./images/Team/img2@1x.jpg 1x, ./images/Team/img2@2x.jpg 2x"
+                        src="./images/Team/img2@1x.jpg" alt="photo of Tom Ford" width="264" height="260">
                     <div class="team-content">
                         <h3 class="title">Tom Ford</h3>
                         <p class="description">Frontend Developer</p>
@@ -194,7 +221,9 @@
                     </div>
                 </li>
                 <li class="team-item">
-                    <img src="./images/team_card3.jpg" alt="photo of Camila Garcia" width="264" height="260">
+                    <img
+                        srcset="./images/Team/img3@1x.jpg 1x, ./images/Team/img3@2x.jpg 2x"
+                        src="./images/Team/img3@1x.jpg" alt="photo of Camila Garcia" width="264" height="260">
                     <div class="team-content">
                         <h3 class="title">Camila Garcia</h3>
                         <p class="description">Marketing</p>
@@ -239,7 +268,9 @@
                     </div>
                 </li>
                 <li class="team-item">
-                    <img src="./images/team_card4.jpg" alt="photo of Daniel Wilson" width="264" height="260">
+                    <img
+                        srcset="./images/Team/img4@1x.jpg 1x, ./images/Team/img4@2x.jpg 2x"
+                        src="./images/Team/img4@1x.jpg" alt="photo of Daniel Wilson" width="264" height="260">
                     <div class="team-content">
                         <h3 class="title">Daniel Wilson</h3>
                         <p class="description">UI Designer</p>
@@ -286,6 +317,7 @@
             </ul>
             </div>
         </section>
+    <!-- Customers -->
         <section class="section">
         <div class="container">
             <h2 class="section-title customers-title">Customers</h2>
@@ -338,6 +370,7 @@
         </div>
         </section>
     </main>
+    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-logo">
@@ -406,7 +439,7 @@
                     <use href="./images/icons.svg#icon-close-black"></use>
                 </svg>
             </button>
-            <!-- Form -->
+    <!-- Form -->
             <strong class="form-title">Leave your contacts and we will call you back</strong>
             <form class="form" name="contact-form">
                 <label class="form-lebel" for="user_name">Name</label>
@@ -447,6 +480,77 @@
             </form>
         </div>
     </div>  
+<!-- Mobile menu -->
+    <div class="menu-container js-menu-container" id="mobile-menu">
+        <button class="menu-toggle js-close-menu">
+            <svg class="modal-icon" width="8" height="8">
+                <use href="./images/icons.svg#icon-close-black"></use>
+            </svg>
+        </button>
+  
+        <ul class="mobile-menu list">
+          <li>
+            <a href="" class="current-link link">Studio</a>
+        </li>
+          <li>
+            <a href="" class="link">Portfolio</a>
+        </li>
+          <li>
+
+            <a href="" class="link">Contacts</a>
+        </li>
+        </ul>
+        <ul class="mobile-address list">
+             <li class="item"><a class="mobile-address-tel link" href="tel:+110001111111">+11 (000) 111-11-11</a></li>
+            <li class="item"><a class="mobile-address-mail link" href="mailto:info@devstudio.com">info@devstudio.com</a></li>
+        </ul>
+        <ul class="mobile-socials list">
+            <li class="socials-item">
+                <a class="socials-link link" href="https://www.instagram.com" target="_blank"
+                 rel="noopener noreferrer" 
+                 aria-label="Instagram icon">
+                    <svg class="socials-icon" width="24" height="24" >
+                        <use href="./images/icons.svg#icon-instagram"></use>
+                    </svg>
+                </a>
+            </li>
+            <li class="socials-item">
+                <a class="socials-link link" href="https://twitter.com" target="_blank"
+                 rel="noopener noreferrer" 
+                 aria-label="Twitter icon">
+                    <svg class="socials-icon" width="24" height="24" >
+                        <use href="./images/icons.svg#icon-twitter"></use>
+                    </svg>
+                </a>
+            </li>
+            <li class="socials-item">
+                <a class="socials-link link" href="https://www.facebook.com" target="_blank"
+                 rel="noopener noreferrer" 
+                 aria-label="Facebook icon">
+                    <svg class="socials-icon" width="24" height="24" >
+                        <use href="./images/icons.svg#icon-facebook"></use>
+                    </svg>
+                </a>
+            </li>
+            <li class="socials-item">
+                <a class="socials-link link" href="https://www.linkedin.com" target="_blank"
+                 rel="noopener noreferrer" 
+                 aria-label="Linkedin icon">
+                    <svg class="socials-icon" width="24" height="24" >
+                        <use href="./images/icons.svg#icon-linkedin"></use>
+                    </svg>
+                </a>
+            </li>
+        </ul>
+    </div>
+  
+    <script
+        defer
+        src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+        integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+        crossorigin="anonymous">
+    </script>
+    <script defer src="./js/mobile-menu.js"></script>
     <script src="./js/modal.js"></script>      
 </body>
 </html>
