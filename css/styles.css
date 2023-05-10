@@ -84,9 +84,7 @@ img {
     min-width: 320px;
     max-width: 428px;
     margin: 0 auto;
-    
-    padding-top: 10px;
-    padding-bottom: 11px;
+    min-height: 70px;
     padding-left: 16px;
     padding-right: 16px;
 
@@ -94,6 +92,8 @@ img {
     
     
 }
+
+
 
 @media only screen and (min-width: 768px) {
     .container, .hero.container {
@@ -177,7 +177,13 @@ img {
      border: none;
  }
 
-/****** Links *************/
+
+ /**
+   |============================
+   | Links
+   |============================
+ */
+
 
  .nav-list {
     display: flex;
@@ -248,7 +254,12 @@ img {
 }
 
 
-/* address */
+/**
+  |============================
+  | ADDRESS
+  |============================
+*/
+
 
 .address {
     font-style: normal;
@@ -269,11 +280,20 @@ img {
    }
  }
  
+ @media only screen and (max-width: 1157px) {
+    .address-list {
+        font-size: 12px;
+        line-height: 1.17;
+        
+        letter-spacing: 0.04em;
+   }
+ }
  @media only screen and (min-width: 1158px) {
     .address-list {
         display: flex;
         gap: 40px;
         padding-top: 0;
+        
         
    }
 }
@@ -281,7 +301,9 @@ img {
 .address-list .link {
     display: block;
     padding-bottom: 12px;
+    margin-left: auto;
     
+
     
     
 }
@@ -307,8 +329,6 @@ img {
 
 
 
-
-
 /**
   |============================
   | HERO
@@ -316,7 +336,7 @@ img {
 */
 
 
- .hero {
+.hero {
     padding-top: 112px;
     
     background-color:var(--secondary-text-bg-color);
@@ -333,7 +353,7 @@ img {
 
 .overlay {
     max-width: 1440px;
-    height: 600px;
+    height: 432px;
     margin-left: auto;
     margin-right: auto;
 
@@ -352,6 +372,7 @@ img {
 
 @media only screen and (min-width:429px) and (max-width: 767px) {
     .overlay {
+        
         background-image:url(../images/Hero/hero_tab@1x.jpg)
   }
 
@@ -365,6 +386,7 @@ img {
 
 @media only screen and (min-width: 768px) {
     .overlay {
+        height: 436px;
         background-image: linear-gradient(var(--hero-bg-color), var(--hero-bg-color)), url(../images/Hero/hero_desk@1x.jpg)
   }
   @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
@@ -374,6 +396,11 @@ img {
   }
 }
 
+@media only screen and (min-width: 1158px) {
+    .overlay {
+        height: 600px;
+  }
+}
 .hero-title{
     max-width: 496px;
     margin-bottom: 72px;
@@ -453,7 +480,11 @@ img {
     text-transform: capitalize
 }
 
-/* Features */
+/**
+  |============================
+  | Features
+  |============================
+*/
 
 .visually-hidden { 
     position: absolute; 
@@ -485,6 +516,8 @@ img {
     font-size: 36px;
     line-height: 1.11;
     letter-spacing: 0.02em;
+
+    
 }
 
 @media only screen and (max-width: 767px) {
@@ -500,6 +533,17 @@ img {
   }
 }
 
+@media only screen and (max-width: 1157px) {
+    .features .description {
+        font-weight: 500;
+  }
+}
+
+@media only screen and (min-width: 1158px) {
+    .features .description {
+        font-weight: 400;
+  }
+}
 
 
 @media only screen and (min-width: 768px) {
@@ -748,8 +792,11 @@ img {
     fill: currentColor;
 }
 
-
-/* *****PORTFOLIO******** */
+/**
+  |============================
+  | PORTFOLIO
+  |============================
+*/
 
 .filter {
     padding-top: 96px;
@@ -885,8 +932,15 @@ img {
 }
 
 
-/* *************FOOTER**************** */
+/**
+  |============================
+  | FOOTER
+  |============================
+*/
+
+
 .footer {
+    
     padding-top: 100px;
     padding-bottom: 100px;
 
@@ -894,6 +948,12 @@ img {
 
 }
 
+@media only screen and (min-width: 768px) and (max-width:1157px) {
+    .footer .footer-container {
+        padding-left: 108px;
+        
+  }
+}
 .footer .container {
      display: flex;
      flex-wrap: wrap;
@@ -1001,8 +1061,11 @@ img {
 }
 
 
-/* FOOTER FORM SUBSCRIBE */
-
+/**
+  |============================
+  | FOOTER FORM SUBSCRIBE
+  |============================
+*/
 
 @media only screen and (max-width: 767px) {
     .footer-form-subscribe {
@@ -1029,9 +1092,6 @@ img {
     
   }
 }
-
-
-.footer-form-label {}
 
 
 .footer-form-input {
@@ -1086,9 +1146,12 @@ img {
     fill: currentColor;
 }
 
+/**
+  |============================
+  | MODAL
+  |============================
+*/
 
-
-/******** MODAL ********/
 
 .backdrop {
     position: fixed;
@@ -1099,6 +1162,9 @@ img {
     width: 100vw;
     height: 100vh;
 
+    overflow: scroll;
+
+    
     background: var(--modal-border);
     transition: opacity var(--transition), visibility var(--transition);
 
@@ -1120,8 +1186,8 @@ img {
     width: 408px;
     min-height: 584px;
     padding: 24px;
-
-
+    overflow: scroll;
+   
 
     background-color: var(--modal-bg-color);
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -1132,7 +1198,23 @@ img {
     transition: transform var(--transition);
 
 }
+ @media only screen and (max-width: 767px), (orientation: landscape) { 
+     .modal {
+     
+      max-width: 392px;
+      width: 100%;
+          
+      padding-left: 16px;
+      padding-right: 16px;
 
+      top: 0;
+      left: 50%;
+      transform: translate(-50%, 0%) scale(1)
+      
+      
+    }
+  }
+ 
 .backdrop.is-hidden .modal {
     transform: translate(-50%, -50%) scale(0.5);
 
@@ -1174,7 +1256,12 @@ img {
 }
 
 
-/******* Form *********/
+/**
+  |============================
+  | FORM
+  |============================
+*/
+
 
 .form {
     color: var(--customers-color);
@@ -1356,6 +1443,7 @@ img {
     border: 1px solid rgba(46,47,66,0.1);
     border-radius: 50%;
     outline: none;
+    
   }
   
   @media (min-width: 768px) {
@@ -1387,6 +1475,7 @@ img {
 
     display: flex;
     flex-direction: column;
+    overflow: auto;
 
     background-color: var(--white-color);
     z-index: 999;
@@ -1449,6 +1538,12 @@ img {
 
     color: var(--accent-color);
   }
+
+  @media only screen and (max-width: 427px) {
+    .mobile-address-tel {
+      font-size: 25px;
+    }
+  }
   .mobile-address-mail {
     
     font-weight: 500;
@@ -1463,6 +1558,7 @@ img {
 
   .mobile-socials {
     display: flex;
-    justify-content: center;
-    gap: 56px;
+    justify-content: space-between;
   }
+
+  
