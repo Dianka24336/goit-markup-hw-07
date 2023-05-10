@@ -1176,7 +1176,7 @@ img {
     width: 408px;
     min-height: 584px;
     padding: 24px;
-    overflow: scroll;
+    overflow: auto;
    
 
     background-color: var(--modal-bg-color);
@@ -1188,7 +1188,7 @@ img {
     transition: transform var(--transition);
 
 }
- @media only screen and (max-width: 767px), (orientation: landscape) { 
+ @media only screen and (max-width: 767px) { 
      .modal {
      
       max-width: 392px;
@@ -1197,13 +1197,18 @@ img {
       padding-left: 16px;
       padding-right: 16px;
 
-      top: 0;
-      left: 50%;
-      transform: translate(-50%, 0%) scale(1)
-      
-      
+            
     }
   }
+
+  @media only screen and (max-width: 767px) and (orientation: landscape) {
+    .modal {
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, 0%) scale(1)
+    }
+  }
+
  
 .backdrop.is-hidden .modal {
     transform: translate(-50%, -50%) scale(0.5);
